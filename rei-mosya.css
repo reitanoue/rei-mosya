@@ -1,0 +1,112 @@
+.main {
+  height: 100%;
+}
+
+.btn {
+  width: 100%;
+  display: block;
+  width: 39px;
+  height: 39px;
+  position: absolute;
+  right: 0;
+  z-index: 999; /*追記：いつも一番上*/
+}
+
+.bar {
+  width: 20px;
+  height: 2px;
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #000;
+}
+
+.bar-top {
+  top: 10px;
+}
+.bar-middle {
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.bar-bottom {
+  bottom: 10px;
+}
+
+.btn.close .bar-top {
+  transform: translate(-50%, 10px) rotate(45deg);
+  transition: transform 0.3s;
+}
+
+.btn.close .bar-middle {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.btn.close .bar-bottom {
+  transform: translate(-50%, -8px) rotate(-45deg);
+  transition: transform 0.3s;
+}
+
+.menu-lists {
+  display: none;
+  background-color: #ff0033;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 50px;
+  text-align: center;
+  z-index: 10;
+}
+
+.menu-lists ul {
+  display: block;
+}
+
+.menu-lists a {
+  text-align: left;
+  font: normal normal bold 16px/27px Arial;
+  letter-spacing: 1.6px;
+  color: #ffffff;
+  opacity: 1;
+}
+
+.menu-lists-link {
+  top: 239px;
+  left: 63px;
+  width: 250px;
+  height: 46px;
+  border: 1px solid #ffffff;
+  opacity: 1;
+}
+
+.firstview {
+  height: 100%;
+}
+
+.firstview__button {
+  font-size: 24px;
+  color: #fff;
+  background-color: #ff0033;
+  padding: 15px 135px;
+  box-shadow: 0 6px #7a051c;
+  border-radius: 10px;
+  position: relative;
+  align-items: center;
+}
+
+.firstview__button::after {
+  content: "";
+  display: block;
+  width: 23px;
+  height: 23px;
+  border-top: 3px solid #fff;
+  border-right: 3px solid #fff;
+  position: absolute;
+  right: 54px;
+  top: 50%;
+  margin-top: -13px;
+  transform: rotate(45deg);
+}
